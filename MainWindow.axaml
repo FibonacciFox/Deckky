@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Deckky.Controls"
+        mc:Ignorable="d" 
+        d:DesignWidth="600" 
+        d:DesignHeight="400"
+        Width="1280" Height="800" MinWidth="1280" MinHeight="800"
+        Title="Deckky"
+        x:Class="Deckky.MainWindow">
+    <StackPanel>
+        <controls:NavigationBar/>
+    </StackPanel>
+</Window>
