@@ -21,4 +21,20 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.18" />
     <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Controls\NavigationBar.axaml.cs">
+      <DependentUpon>NavigationBar.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaXaml Update="Controls\NavigationBar.styles.axaml">
+      <DependentUpon>NavigationBar.axaml</DependentUpon>
+    </AvaloniaXaml>
+    <AvaloniaXaml Update="Controls\Buttons\NavigationButton.styles.axaml">
+      <DependentUpon>NavigationButton.axaml</DependentUpon>
+    </AvaloniaXaml>
+  </ItemGroup>
 </Project>
