@@ -1,13 +1,18 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Deckky.Controls.Buttons.NavigationButton">
-    <Button CornerRadius="100" HorizontalContentAlignment="Center"  Width="150" Foreground="Black">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Spacing="20">
-                <TextBlock Name="ButtonTitle" Foreground="White" />
-                <TextBlock Name="NumberOfGames" Text="30" Foreground="White" />
-            </StackPanel>
-        </Button>
-</UserControl>
+﻿<Button xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="200"
+        x:Class="Deckky.Controls.Buttons.NavigationButton"
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center" 
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center">
+    <Button.Styles>
+        <StyleInclude Source = "/Styles/NavigationButton.styles.axaml" />
+    </Button.Styles>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="15">
+        <TextBlock Name="ButtonTitle" Text="NavButton" Foreground="White" />
+        <TextBlock Name="ButtonCounter" Text="0" Foreground="White" />
+    </StackPanel>
+</Button>

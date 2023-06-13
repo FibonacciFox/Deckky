@@ -1,0 +1,15 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <Style Selector="Button">
+                <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        
+        <Style Selector = "Button.Selected">
+                <Setter Property = "BorderBrush" Value = "White" />
+        </Style>
+        
+        <Style Selector = "TextBlock">
+                <Setter Property = "Foreground" Value="Red"/>
+        </Style> 
+        
+</Styles>

@@ -3,19 +3,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:deckky="clr-namespace:Deckky.Controls.Buttons"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="100"
              x:Class="Deckky.Controls.NavigationBar">
     <StackPanel>
-        <Grid Background="#1A1E25" Height="60" ColumnDefinitions="Auto,*,Auto">
-            <Rectangle Grid.Column="0" Fill="White" Height="44" Width="44" Margin="31,8,0,8" />
+        <Grid Background="#1A1E25" Height="100" ColumnDefinitions="Auto,*,Auto">
+            <Image Grid.Column="0" Width="44" Height="44" Margin="31,8,0,8" Source="/Assets/L1.png" />
             <Grid Grid.Column="1" HorizontalAlignment="Center" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto">
-                <deckky:NavigationButton Margin="30,0,0,0" Title="All Games" Grid.Column="0" /> 
-                <deckky:NavigationButton Margin="30,0,0,0" Title="Windows" Grid.Column="1" />   
-                <deckky:NavigationButton Margin="30,0,0,0" Title="WINE|LINUX" Grid.Column="2" />   
-                <Button Grid.Column="3" Margin="30,0,0,0" HorizontalContentAlignment="Center" Width="150" Foreground="White">Загрузка</Button>
-                <Button Grid.Column="4" Margin="30,0,0,0" HorizontalContentAlignment="Center" Width="150" Foreground="White">Профиль</Button>
+                <deckky:NavigationButton Title="ВСЕ ИГРЫ" Counter="30" IsVisibleCounter="True" Grid.Column="0" />
+                <deckky:NavigationButton Classes="Selected" Title="WINDOWS" Counter="15" IsVisibleCounter="True" Grid.Column="1" />
+                <deckky:NavigationButton Title="WINE|LINUX" IsVisibleCounter="True" Grid.Column="2" />
+                <deckky:NavigationButton Title="ЗАГРУЗКА" IsVisibleCounter="False" Grid.Column="3" />
+                <deckky:NavigationButton Title="ПРОФИЛЬ" IsVisibleCounter="False" Grid.Column="4" />
             </Grid>
-            <Rectangle Grid.Column="2" Fill="White" Height="44" Width="44" Margin="0,8,31,8" />
+
+            <Image Grid.Column="2" Width="44" Height="44" Margin="0,8,31,8" Source="/Assets/R1.png" />
         </Grid>
     </StackPanel>
 </UserControl>
