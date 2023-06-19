@@ -9,11 +9,11 @@
         <Grid Background="#1A1E25" Height="100" ColumnDefinitions="Auto,*,Auto">
             <Image Grid.Column="0" Width="44" Height="44" Margin="31,8,0,8" Source="/Assets/L1.png" />
             <StackPanel Name="NavigationItems" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Spacing="20">
-                <dekky:NavigationItem Name="NavItem0" Title="ВСЕ ИГРЫ" Counter="123" IsVisibleCounter="True" Selected="True" /> 
-                <dekky:NavigationItem Name="NavItem1" Title="WINDOWS" Counter="80" IsVisibleCounter="True"  /> 
-                <dekky:NavigationItem Name="NavItem2" Title="WINE|LINUX" Counter="43" IsVisibleCounter="True" /> 
-                <dekky:NavigationItem Name="NavItem3" Title="ЗАГРУЗКА" Counter="10" IsVisibleCounter="False" /> 
-                <dekky:NavigationItem Name="NavItem4" Title="ПРОФИЛЬ" Counter="10" IsVisibleCounter="False" /> 
+                <dekky:NavigationItem Name="AllGamesItem" Title="ВСЕ ИГРЫ" Counter="123" IsVisibleCounter="True"/> 
+                <dekky:NavigationItem Name="WindowsGamesItem" Title="WINDOWS" Counter="80" IsVisibleCounter="True"  /> 
+                <dekky:NavigationItem Name="WineLinuxItem" Title="WINE|LINUX" Counter="43" IsVisibleCounter="True" /> 
+                <dekky:NavigationItem Name="DownloadingGamesItem" Title="ЗАГРУЗКА" Counter="10" IsVisibleCounter="False" /> 
+                <dekky:NavigationItem Name="ProfileItem" Title="ПРОФИЛЬ" Counter="10" IsVisibleCounter="False" /> 
             </StackPanel>
             <Image Grid.Column="2" Width="44" Height="44" Margin="0,8,31,8" Source="/Assets/R1.png" />
         </Grid>

@@ -39,11 +39,7 @@
     <AvaloniaResource Include="Assets\**" />
     <AvaloniaResource Include="Styles\**" />
   </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Controls\Buttons\NavigationButton.axaml" />
-  </ItemGroup>
-
+  
   <ItemGroup>
     <Folder Include="Styles" />
   </ItemGroup>

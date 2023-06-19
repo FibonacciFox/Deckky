@@ -10,6 +10,6 @@
         Title="Deckky"
         x:Class="Deckky.MainWindow">
     <StackPanel Background="#1A1E25" >
-        <deckky:NavigationBar/>
+        <deckky:NavigationBar Name="NavBar" ActiveItem="0"/>
     </StackPanel>
 </Window>
