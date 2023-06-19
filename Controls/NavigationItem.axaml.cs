@@ -5,11 +5,14 @@ namespace Deckky.Controls;
 
 public partial class NavigationItem : UserControl
 {
+    /// <summary>
+    /// Заголовок NavigationItem
+    /// </summary>
     public static readonly StyledProperty<string> TitleProperty =
         AvaloniaProperty.Register<NavigationItem, string>(nameof(Title));
     
     /// <summary>
-    /// Счетчик чего либо на кнопке
+    /// Счетчик чего либо на NavigationItem
     /// </summary>
     public static readonly StyledProperty<int> CounterProperty =
         AvaloniaProperty.Register<NavigationItem, int>(nameof(Counter));
@@ -23,12 +26,18 @@ public partial class NavigationItem : UserControl
     /// <summary>
     /// Заголовок NavigationItem
     /// </summary>
+    public static readonly StyledProperty<bool> SelectedProperty =
+        AvaloniaProperty.Register<NavigationItem, bool>(nameof(Selected));
+    
+    /// <summary>
+    /// Заголовок NavigationItem
+    /// </summary>
     public string Title
     {
         get => ItemTitle.Text;
         set => ItemTitle.Text = value;
     }
-    
+
     /// <summary>
     /// Счетчик чего либо на кнопке
     /// </summary>
@@ -37,7 +46,23 @@ public partial class NavigationItem : UserControl
         get => int.Parse(ItemCounter.Text);
         set => ItemCounter.Text = value.ToString();
     }
-    
+
+    /// <summary>
+    /// Отображать счетчик
+    /// </summary>
+    public bool Selected
+    {
+        get => GetValue(SelectedProperty);
+        set
+        {
+            if (value) 
+                Classes.Add("Selected");
+            else
+                Classes.Remove("Selected");
+            SetValue(SelectedProperty, value);
+        }
+    }
+
     /// <summary>
     /// Отображать счетчик
     /// </summary>
@@ -46,10 +71,11 @@ public partial class NavigationItem : UserControl
         get => ItemCounter.IsVisible;
         set => ItemCounter.IsVisible = value;
     }
-    
+
     public NavigationItem()
     {
         InitializeComponent();
+        Selected = false;
     }
     
 }

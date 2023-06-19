@@ -2,18 +2,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Deckky.Controls"
              mc:Ignorable="d"
              x:Class="Deckky.Controls.NavigationItem"
              Width="150" Height="40">
     
     <UserControl.Styles>
-        <Style Selector="UserControl.Selected">
-            <Setter Property="CornerRadius" Value="20"/>
-            <Setter Property="Background" Value="White"/>
+        <Style Selector="local|NavigationItem">
+            <Setter Property="Background" Value="Transparent"/>
             <Setter Property="TextBlock.Foreground" Value="White"/>
         </Style>
-        <Style Selector="TextBlock.h1">
-            <Setter Property="FontSize" Value="16"/>
+        
+        <Style Selector="local|NavigationItem.Selected">
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="TextBlock.Foreground" Value="#1A1E25"/>
+            <Setter Property="TextBlock.FontSize" Value="18"/>
+            <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+        </Style>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="17"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </UserControl.Styles>
@@ -22,7 +30,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center" 
                 Spacing="10">
-        <TextBlock Classes="h1" Name="ItemTitle" Text="Item Title" Foreground="Red" />
-        <TextBlock Name="ItemCounter" Text="0" Foreground="Red" />
+        <TextBlock Name="ItemTitle" Text="Item Title"/>
+        <TextBlock Name="ItemCounter" Text="0" />
     </StackPanel>
 </UserControl>
