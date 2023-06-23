@@ -33,14 +33,13 @@
     <AvaloniaXaml Update="Controls\Buttons\NavigationButton.styles.xaml">
       <DependentUpon>NavigationButton.axaml</DependentUpon>
     </AvaloniaXaml>
+    <AvaloniaXaml Update="Controls\NavigationItem.axaml">
+      <DependentUpon>NavigationBar.axaml</DependentUpon>
+    </AvaloniaXaml>
   </ItemGroup>
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
     <AvaloniaResource Include="Styles\**" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Styles" />
   </ItemGroup>
 </Project>

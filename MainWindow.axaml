@@ -10,6 +10,8 @@
         Title="Deckky"
         x:Class="Deckky.MainWindow">
     <StackPanel Background="#1A1E25" >
-        <deckky:NavigationBar Name="NavBar" ActiveItem="0"/>
+        <deckky:NavigationBar Name="NavBar" ActiveItem="1"/>
+        <deckky:ContentCarousel Height="500" Name="CarouselPage"></deckky:ContentCarousel>
+        <TextBlock>_________________________________</TextBlock>
     </StackPanel>
 </Window>

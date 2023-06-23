@@ -12,7 +12,10 @@ public partial class NavigationBar : UserControl
     /// </summary>
     public static readonly StyledProperty<int> ActiveItemProperty =
         AvaloniaProperty.Register<NavigationItem, int>(nameof(ActiveItem));
-
+    
+    /// <summary>
+    /// Устанавливает или получает текущий индекс выбранного NavigationItem
+    /// </summary>
     public int ActiveItem
     {
         get
@@ -23,8 +26,11 @@ public partial class NavigationBar : UserControl
         {
             var lastActiveItem = GetValue(ActiveItemProperty);
             _navigationItems[lastActiveItem].Selected = false;
-            SetValue(ActiveItemProperty, value);
-            _navigationItems[value].Selected = true;
+
+            var newSelectedItemIndex = GetFilteredIndexItemValue(value);
+           
+            SetValue(ActiveItemProperty, newSelectedItemIndex);
+            _navigationItems[newSelectedItemIndex].Selected = true;
         }
     }
 
@@ -32,22 +38,47 @@ public partial class NavigationBar : UserControl
     {
         InitializeComponent();
 
-        foreach (var Item in NavigationItems.Children)
+        foreach (var item in NavigationItems.Children)
         {
-            _navigationItems.Add((NavigationItem)Item);
+            _navigationItems.Add((NavigationItem)item);
         }
         
     }
+    /// <summary>
+    /// Выбрать предыдущий NavigationItem
+    /// </summary>
+    public void SelectPreviousItem()
+    {
+        --ActiveItem;
+    }
+    
+    /// <summary>
+    /// Выбрать следующий NavigationItem
+    /// </summary>
+    public void SelectNextItem()
+    {
+        ++ActiveItem;
+    }
 
-    public void PreviousItem()
+    /// <summary>
+    /// Позволяет фильтровать индекс элемента навигации, чтобы не выходить из диапазона списка NavigationItem
+    /// </summary>
+    /// <param name="indexValue"></param>
+    /// <returns></returns>
+    private int GetFilteredIndexItemValue(int indexValue)
     {
-        ActiveItem -= 1;
+        if (indexValue >= NavigationItems.Children.Count)
+        {
+            return 0;
+        }
+            
+        if (indexValue <=-1)
+        {
+            return NavigationItems.Children.Count - 1;
+        }
+
+        return indexValue;
     }
-    
-    public void NextItem()
-    {
-        ActiveItem += 1;
-    }
-    
+
     private List<NavigationItem> _navigationItems = new();
 }
