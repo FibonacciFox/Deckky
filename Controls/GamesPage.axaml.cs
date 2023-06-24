@@ -4,11 +4,10 @@ using Avalonia.Markup.Xaml;
 
 namespace Deckky.Controls;
 
-public partial class CardPreview : UserControl
+public partial class GamesPage : UserControl
 {
-    public CardPreview()
+    public GamesPage()
     {
         InitializeComponent();
     }
-
 }

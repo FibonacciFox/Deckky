@@ -10,23 +10,23 @@ public partial class MainWindow : Window
         InitializeComponent();
         KeyDown+= OnKeyDown;
 
-        CarouselPage.Carousel.SelectedIndex = NavBar.ActiveItem;
+        CarouselPage.SelectedIndex = NavigationBar.ActiveItem;
     }
 
     private void OnKeyDown(object? sender, KeyEventArgs e)
     {
         if (e.Key == Key.LeftCtrl)
         {
-            NavBar.SelectPreviousItem();
-            Title = $"Выбранный элемент: {NavBar.ActiveItem}";
-            CarouselPage.Carousel.SelectedIndex = NavBar.ActiveItem;
+            NavigationBar.SelectPreviousItem();
+            Title = $"Выбранный элемент: {NavigationBar.ActiveItem}";
+            CarouselPage.SelectedIndex = NavigationBar.ActiveItem;
         }
         
         if (e.Key == Key.RightCtrl)
         {
-            NavBar.SelectNextItem();
-            Title = $"Выбранный элемент: {NavBar.ActiveItem}";
-            CarouselPage.Carousel.SelectedIndex = NavBar.ActiveItem;
+            NavigationBar.SelectNextItem();
+            Title = $"Выбранный элемент: {NavigationBar.ActiveItem}";
+            CarouselPage.SelectedIndex = NavigationBar.ActiveItem;
         }
     }
 }

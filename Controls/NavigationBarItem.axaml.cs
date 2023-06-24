@@ -3,34 +3,34 @@ using Avalonia.Controls;
 
 namespace Deckky.Controls;
 
-public partial class NavigationItem : UserControl
+public partial class NavigationBarItem : UserControl
 {
     /// <summary>
-    /// Заголовок NavigationItem
+    /// Заголовок NavigationBarItem
     /// </summary>
     public static readonly StyledProperty<string> TitleProperty =
-        AvaloniaProperty.Register<NavigationItem, string>(nameof(Title));
+        AvaloniaProperty.Register<NavigationBarItem, string>(nameof(Title));
     
     /// <summary>
-    /// Счетчик чего либо на NavigationItem
+    /// Счетчик чего либо на NavigationBarItem
     /// </summary>
     public static readonly StyledProperty<int> CounterProperty =
-        AvaloniaProperty.Register<NavigationItem, int>(nameof(Counter));
+        AvaloniaProperty.Register<NavigationBarItem, int>(nameof(Counter));
     
     /// <summary>
     /// Отображать счетчик
     /// </summary>
     public static readonly StyledProperty<bool> IsVisibleCounterProperty =
-        AvaloniaProperty.Register<NavigationItem, bool>(nameof(IsVisibleCounter));
+        AvaloniaProperty.Register<NavigationBarItem, bool>(nameof(IsVisibleCounter));
     
     /// <summary>
-    /// Заголовок NavigationItem
+    /// Заголовок NavigationBarItem
     /// </summary>
     public static readonly StyledProperty<bool> SelectedProperty =
-        AvaloniaProperty.Register<NavigationItem, bool>(nameof(Selected));
+        AvaloniaProperty.Register<NavigationBarItem, bool>(nameof(Selected));
     
     /// <summary>
-    /// Заголовок NavigationItem
+    /// Заголовок NavigationBarItem
     /// </summary>
     public string Title
     {
@@ -72,7 +72,7 @@ public partial class NavigationItem : UserControl
         set => ItemCounter.IsVisible = value;
     }
 
-    public NavigationItem()
+    public NavigationBarItem()
     {
         InitializeComponent();
         Selected = false;

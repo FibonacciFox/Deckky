@@ -8,13 +8,13 @@ public partial class NavigationBar : UserControl
 {
 
     /// <summary>
-    /// Заголовок NavigationItem
+    /// Заголовок NavigationBarItem
     /// </summary>
     public static readonly StyledProperty<int> ActiveItemProperty =
-        AvaloniaProperty.Register<NavigationItem, int>(nameof(ActiveItem));
+        AvaloniaProperty.Register<NavigationBarItem, int>(nameof(ActiveItem));
     
     /// <summary>
-    /// Устанавливает или получает текущий индекс выбранного NavigationItem
+    /// Устанавливает или получает текущий индекс выбранного NavigationBarItem
     /// </summary>
     public int ActiveItem
     {
@@ -40,12 +40,12 @@ public partial class NavigationBar : UserControl
 
         foreach (var item in NavigationItems.Children)
         {
-            _navigationItems.Add((NavigationItem)item);
+            _navigationItems.Add((NavigationBarItem)item);
         }
         
     }
     /// <summary>
-    /// Выбрать предыдущий NavigationItem
+    /// Выбрать предыдущий NavigationBarItem
     /// </summary>
     public void SelectPreviousItem()
     {
@@ -53,7 +53,7 @@ public partial class NavigationBar : UserControl
     }
     
     /// <summary>
-    /// Выбрать следующий NavigationItem
+    /// Выбрать следующий NavigationBarItem
     /// </summary>
     public void SelectNextItem()
     {
@@ -61,7 +61,7 @@ public partial class NavigationBar : UserControl
     }
 
     /// <summary>
-    /// Позволяет фильтровать индекс элемента навигации, чтобы не выходить из диапазона списка NavigationItem
+    /// Позволяет фильтровать индекс элемента навигации, чтобы не выходить из диапазона списка NavigationBarItem
     /// </summary>
     /// <param name="indexValue"></param>
     /// <returns></returns>
@@ -80,5 +80,5 @@ public partial class NavigationBar : UserControl
         return indexValue;
     }
 
-    private List<NavigationItem> _navigationItems = new();
+    private List<NavigationBarItem> _navigationItems = new();
 }

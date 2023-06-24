@@ -1,0 +1,18 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:deckky="clr-namespace:Deckky.Controls"
+             mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="550"
+             x:Class="Deckky.Controls.GamesPage"
+             Background="#33383E">
+    <StackPanel Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <ListBox Background="Transparent" Margin="3" Height="500" ScrollViewer.VerticalScrollBarVisibility="Hidden" VirtualizationMode="None">
+            <ListBoxItem>
+                <deckky:CardGamePreview />
+            </ListBoxItem>
+            <deckky:CardGamePreview />
+            <Button HorizontalAlignment="Center">Загрузить еще</Button>
+        </ListBox>
+    </StackPanel>
+</UserControl>

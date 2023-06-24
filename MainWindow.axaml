@@ -10,8 +10,16 @@
         Title="Deckky"
         x:Class="Deckky.MainWindow">
     <StackPanel Background="#1A1E25" >
-        <deckky:NavigationBar Name="NavBar" ActiveItem="1"/>
-        <deckky:ContentCarousel Height="500" Name="CarouselPage"></deckky:ContentCarousel>
-        <TextBlock>_________________________________</TextBlock>
+        <deckky:NavigationBar Name="NavigationBar" ActiveItem="0"/>
+        <Carousel HorizontalAlignment="Center" VerticalAlignment="Center" Name="CarouselPage">
+            <Carousel.PageTransition>
+                <PageSlide Duration="0.25" Orientation="Horizontal" />
+            </Carousel.PageTransition>
+            <deckky:GamesPage/>
+            <deckky:GamesPage/>
+            <deckky:GamesPage/>
+            <deckky:GamesPage/>
+            <deckky:GamesPage/>
+        </Carousel>
     </StackPanel>
 </Window>

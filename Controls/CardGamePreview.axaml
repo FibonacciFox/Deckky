@@ -1,0 +1,31 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="115"
+             x:Class="Deckky.Controls.CardGamePreview"
+             Background="#3C3945"
+             Width="1200">
+    <Grid Background="Transparent" ColumnDefinitions="Auto,*">
+        <Image Grid.Column="0" Stretch="UniformToFill" Width="360" Height="115" Source="/Assets/CardImage.jpg" />
+        <StackPanel Grid.Column="1" Background="Transparent" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Margin="0,10,0,0" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding Title}"/>
+            <StackPanel Margin="0,5,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock>Torrent:</TextBlock>
+                <TextBlock Margin="1,0,0,0" FontWeight="Bold">RuTracker</TextBlock>
+                <TextBlock Margin="10,0,0,0">Сиды:</TextBlock>
+                <TextBlock Margin="2,0,0,0" Foreground="#07ED1E" FontWeight="Bold">100</TextBlock>
+                <TextBlock Margin="5,0,0,0">Личи:</TextBlock>
+                <TextBlock Margin="2,0,0,0" Foreground="#FF0000" FontWeight="Bold">15</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
+                <TextBlock>Размер:</TextBlock>
+                <TextBlock Margin="1,0,0,0" FontWeight="Bold">67.39 GB</TextBlock>
+                <TextBlock Margin="10,0,0,0">Зарегистрирован:</TextBlock>
+                <TextBlock Margin="2,0,0,0" FontWeight="Bold">6 месяцев</TextBlock>
+                <TextBlock Margin="5,0,0,0">.torrent скачан:</TextBlock>
+                <TextBlock Margin="2,0,0,0" Foreground="#FF0000" FontWeight="Bold">447 раз</TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
