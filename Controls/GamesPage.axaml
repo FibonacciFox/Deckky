@@ -7,9 +7,9 @@
              x:Class="Deckky.Controls.GamesPage"
              Background="#33383E">
     <StackPanel Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <ListBox Background="Transparent" Margin="3" Height="500" ScrollViewer.VerticalScrollBarVisibility="Hidden" VirtualizationMode="None">
+        <ListBox Background="Transparent" Margin="3" Height="500" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <ListBoxItem>
-                <deckky:CardGamePreview />
+                <deckky:CardGamePreview Title="Название игры" TorrentTrackerName="RuTracker" />
             </ListBoxItem>
             <deckky:CardGamePreview />
             <Button HorizontalAlignment="Center">Загрузить еще</Button>
